@@ -19,7 +19,7 @@
 		028239602892C3D300B0BE63 /* MainTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0282395F2892C3D300B0BE63 /* MainTabBarController.swift */; };
 		028239622892C40600B0BE63 /* AlbumTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 028239612892C40600B0BE63 /* AlbumTableViewCell.swift */; };
 		028239642892C42F00B0BE63 /* DetailScreenController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 028239632892C42F00B0BE63 /* DetailScreenController.swift */; };
-		028239662892C45E00B0BE63 /* DetailTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 028239652892C45E00B0BE63 /* DetailTableViewCell.swift */; };
+		028239662892C45E00B0BE63 /* FavoritesTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 028239652892C45E00B0BE63 /* FavoritesTableViewController.swift */; };
 		028239682892C48300B0BE63 /* UIViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 028239672892C48300B0BE63 /* UIViewExtension.swift */; };
 		0282396A2892C49E00B0BE63 /* UIViewStackExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 028239692892C49E00B0BE63 /* UIViewStackExtension.swift */; };
 		0282396C2892C4AF00B0BE63 /* UIButtonExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0282396B2892C4AF00B0BE63 /* UIButtonExtension.swift */; };
@@ -29,6 +29,7 @@
 		028239752892C53A00B0BE63 /* NetworkParam.swift in Sources */ = {isa = PBXBuildFile; fileRef = 028239742892C53A00B0BE63 /* NetworkParam.swift */; };
 		028239772892C54F00B0BE63 /* UserDefaults.swift in Sources */ = {isa = PBXBuildFile; fileRef = 028239762892C54F00B0BE63 /* UserDefaults.swift */; };
 		028239792892C56C00B0BE63 /* ImageCache.swift in Sources */ = {isa = PBXBuildFile; fileRef = 028239782892C56C00B0BE63 /* ImageCache.swift */; };
+		02DAE96228989C9F0061DE10 /* FavoritesViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02DAE96128989C9F0061DE10 /* FavoritesViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -46,7 +47,7 @@
 		0282395F2892C3D300B0BE63 /* MainTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabBarController.swift; sourceTree = "<group>"; };
 		028239612892C40600B0BE63 /* AlbumTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlbumTableViewCell.swift; sourceTree = "<group>"; };
 		028239632892C42F00B0BE63 /* DetailScreenController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailScreenController.swift; sourceTree = "<group>"; };
-		028239652892C45E00B0BE63 /* DetailTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailTableViewCell.swift; sourceTree = "<group>"; };
+		028239652892C45E00B0BE63 /* FavoritesTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoritesTableViewController.swift; sourceTree = "<group>"; };
 		028239672892C48300B0BE63 /* UIViewExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewExtension.swift; sourceTree = "<group>"; };
 		028239692892C49E00B0BE63 /* UIViewStackExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewStackExtension.swift; sourceTree = "<group>"; };
 		0282396B2892C4AF00B0BE63 /* UIButtonExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIButtonExtension.swift; sourceTree = "<group>"; };
@@ -56,6 +57,7 @@
 		028239742892C53A00B0BE63 /* NetworkParam.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkParam.swift; sourceTree = "<group>"; };
 		028239762892C54F00B0BE63 /* UserDefaults.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaults.swift; sourceTree = "<group>"; };
 		028239782892C56C00B0BE63 /* ImageCache.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageCache.swift; sourceTree = "<group>"; };
+		02DAE96128989C9F0061DE10 /* FavoritesViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoritesViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -75,6 +77,7 @@
 				0282396F2892C50300B0BE63 /* Service */,
 				028239582892C30A00B0BE63 /* Resource */,
 				028239572892C30300B0BE63 /* Model */,
+				02DAE96028989BCE0061DE10 /* Cells */,
 				028239562892C2FC00B0BE63 /* Controller */,
 				028239552892C2F300B0BE63 /* Extension */,
 				028239542892C2E900B0BE63 /* CoreData */,
@@ -126,9 +129,8 @@
 			isa = PBXGroup;
 			children = (
 				0282395F2892C3D300B0BE63 /* MainTabBarController.swift */,
-				028239612892C40600B0BE63 /* AlbumTableViewCell.swift */,
 				028239632892C42F00B0BE63 /* DetailScreenController.swift */,
-				028239652892C45E00B0BE63 /* DetailTableViewCell.swift */,
+				028239652892C45E00B0BE63 /* FavoritesTableViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -161,6 +163,15 @@
 				028239782892C56C00B0BE63 /* ImageCache.swift */,
 			);
 			path = Service;
+			sourceTree = "<group>";
+		};
+		02DAE96028989BCE0061DE10 /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				028239612892C40600B0BE63 /* AlbumTableViewCell.swift */,
+				02DAE96128989C9F0061DE10 /* FavoritesViewCell.swift */,
+			);
+			path = Cells;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -246,9 +257,10 @@
 				028239792892C56C00B0BE63 /* ImageCache.swift in Sources */,
 				0282393E2892C2C000B0BE63 /* AppDelegate.swift in Sources */,
 				0282396C2892C4AF00B0BE63 /* UIButtonExtension.swift in Sources */,
+				02DAE96228989C9F0061DE10 /* FavoritesViewCell.swift in Sources */,
 				028239482892C2C000B0BE63 /* Livingston_CoreData_2.xcdatamodeld in Sources */,
 				028239402892C2C000B0BE63 /* SceneDelegate.swift in Sources */,
-				028239662892C45E00B0BE63 /* DetailTableViewCell.swift in Sources */,
+				028239662892C45E00B0BE63 /* FavoritesTableViewController.swift in Sources */,
 				028239772892C54F00B0BE63 /* UserDefaults.swift in Sources */,
 				028239712892C51A00B0BE63 /* NetworkManager.swift in Sources */,
 				0282396E2892C4C300B0BE63 /* CoreDataManager.swift in Sources */,

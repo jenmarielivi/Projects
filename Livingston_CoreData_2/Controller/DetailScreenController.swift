@@ -15,7 +15,7 @@ class DetailScreenController: UIViewController {
         let table = UITableView(frame: .zero)
         table.translatesAutoresizingMaskIntoConstraints = false
         
-        table.backgroundColor = .magenta
+        table.backgroundColor = .darkGray
 
         table.layer.cornerRadius = 12
         table.register(AlbumTableViewCell.self, forCellReuseIdentifier: AlbumTableViewCell.reuseId)
@@ -41,6 +41,7 @@ class DetailScreenController: UIViewController {
         label.translatesAutoresizingMaskIntoConstraints = false
         label.numberOfLines = 0
         label.layer.cornerRadius = 5
+        label.textAlignment = .center
         // mask to bounds
         // hugging priority
         // content compression resistance
@@ -56,7 +57,7 @@ class DetailScreenController: UIViewController {
         let label = UILabel(frame: .zero)
         label.translatesAutoresizingMaskIntoConstraints = false
         label.numberOfLines = 0
-        
+        label.textAlignment = .center
         label.setContentHuggingPriority(.required, for: .vertical)
         label.setContentCompressionResistancePriority(.required, for: .vertical)
         label.backgroundColor = .lightGray
@@ -70,7 +71,7 @@ class DetailScreenController: UIViewController {
         let label = UILabel(frame: .zero)
         label.translatesAutoresizingMaskIntoConstraints = false
         label.numberOfLines = 0
-        
+        label.textAlignment = .center
         label.setContentHuggingPriority(.required, for: .vertical)
         label.setContentCompressionResistancePriority(.required, for: .vertical)
         label.backgroundColor = .lightGray
@@ -84,7 +85,7 @@ class DetailScreenController: UIViewController {
         let label = UILabel(frame: .zero)
         label.translatesAutoresizingMaskIntoConstraints = false
         label.numberOfLines = 0
-        
+        label.textAlignment = .center
         label.setContentHuggingPriority(.required, for: .vertical)
         label.setContentCompressionResistancePriority(.required, for: .vertical)
         label.backgroundColor = .lightGray
@@ -98,7 +99,7 @@ class DetailScreenController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         title = "Detail Screen"
-        view.backgroundColor = .cyan // changes background color of the detail screen
+        view.backgroundColor = .lightGray // changes background color of the detail screen
         navigationController?.navigationBar.prefersLargeTitles = true
         navigationItem.title = "details"
         self.setUpUI()
@@ -117,10 +118,10 @@ class DetailScreenController: UIViewController {
         let rightBufferBottom = UIView.createBufferView()
                
         vStackRight.addArrangedSubview(rightBufferTop)
-        vStackRight.addArrangedSubview(self.Title)
-        vStackRight.addArrangedSubview(self.Author)
-        
-        vStackRight.addArrangedSubview(self.Date)
+        vStackRight.addArrangedSubview(self.Title)      // **    Title
+        vStackRight.addArrangedSubview(self.Author)     // **    Author
+        vStackRight.addArrangedSubview(self.Genre)      // **    Genre
+        vStackRight.addArrangedSubview(self.Date)       // **    Date
         vStackRight.addArrangedSubview(rightBufferBottom)
                
         rightBufferTop.heightAnchor.constraint(equalTo: rightBufferBottom.heightAnchor).isActive = true
@@ -130,7 +131,6 @@ class DetailScreenController: UIViewController {
                
         vStackLeft.addArrangedSubview(leftBufferTop)
         vStackLeft.addArrangedSubview(self.Image)
-        vStackLeft.addArrangedSubview(self.Genre)
         vStackLeft.addArrangedSubview(leftBufferBottom)
                
         leftBufferTop.heightAnchor.constraint(equalTo: leftBufferBottom.heightAnchor).isActive = true
@@ -148,9 +148,14 @@ class DetailScreenController: UIViewController {
         super.awakeFromNib() // initialization code
     }
     
+    
+    
     func configure(musicVM: AlbumViewModelTypes, index: Int) {
-        self.Title.text = musicVM.albumTitle(for: index) //
+        self.Title.text = musicVM.albumTitle(for: index)
         self.Author.text = musicVM.albumArtist(for: index)
+        self.Genre.text = musicVM.albumGenre(for: index)
+       
+        
         
         musicVM.albumImage(for: index) { imageData in // minute 30  -- calls in images
             guard let imageData = imageData else {
@@ -168,4 +173,32 @@ class DetailScreenController: UIViewController {
         // music release date
         // album genre
     }
-}
+    
+    
+    
+//    func configureFavPage(musicVM: FavoritesTableViewController, index: Int) {
+//        self.Title.text = musicVM.albumTitle(for: index)
+//        self.Author.text = musicVM.albumArtist(for: index)
+//        self.Genre.text = musicVM.albumGenre(for: index)
+//
+//
+//
+//        musicVM.albumImage(for: index) { imageData in // minute 30  -- calls in images
+//            guard let imageData = imageData else {
+//                return
+//            }
+//
+//            DispatchQueue.main.async {
+//                self.Image.image = UIImage(data: imageData)
+//            }
+//        } // 30 mins into MVVM_cont video
+//        // still need to call the image view
+//
+//        // add in date section
+//
+//        // music release date
+//        // album genre
+//    }// end of secondfunc for favoritespage
+//
+    
+}// end of detailScreenController

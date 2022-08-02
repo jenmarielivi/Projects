@@ -42,7 +42,7 @@ class AlbumTableViewCell: UITableViewCell{
         imageView.translatesAutoresizingMaskIntoConstraints = false
         imageView.contentMode = .scaleAspectFit
         // imageView.backgroundColor = .white
-       // imageView.layer.cornerRadius = 12
+        imageView.layer.cornerRadius = 12
         
         imageView.heightAnchor.constraint(equalToConstant: 150).isActive = true
 
@@ -63,7 +63,7 @@ class AlbumTableViewCell: UITableViewCell{
         // content compression resistance
         label.setContentHuggingPriority(.required, for: .vertical)
         label.setContentCompressionResistancePriority(.required, for: .vertical)
-        label.backgroundColor = .lightGray
+        //label.backgroundColor = .lightGray
         label.text = "Title"
 
         return label
@@ -77,7 +77,7 @@ class AlbumTableViewCell: UITableViewCell{
         
         label.setContentHuggingPriority(.required, for: .vertical)
         label.setContentCompressionResistancePriority(.required, for: .vertical)
-        label.backgroundColor = .lightGray
+        //label.backgroundColor = .lightGray
 
         label.text = "Author: "
 
@@ -88,7 +88,7 @@ class AlbumTableViewCell: UITableViewCell{
     lazy var favoriteButton: UIButton = {
         let button = UIButton(frame: .zero)
         button.translatesAutoresizingMaskIntoConstraints = false
-        button.backgroundColor = .red
+       // button.backgroundColor = .blue
         
         
         button.addTarget(self, action: #selector(self.favoriteButtonPressed), for: .touchUpInside)
@@ -117,7 +117,11 @@ class AlbumTableViewCell: UITableViewCell{
         fatalError("init(coder:) has not been implemented")
     }
     
-    
+//    override func prepareForReuse() {
+//        self.itunesImage.text = UIImage(named: )
+//        self.itunesTitle.text = "title"
+//        self.itunesAuthor.text = "authoe"
+//    }
   
     
     
@@ -136,7 +140,7 @@ class AlbumTableViewCell: UITableViewCell{
                vStackRight.addArrangedSubview(rightBufferTop)
                vStackRight.addArrangedSubview(self.itunesTitle)
                vStackRight.addArrangedSubview(self.itunesAuthor)
-             vStackRight.addArrangedSubview(self.favoriteButton)
+               vStackRight.addArrangedSubview(self.favoriteButton)
                vStackRight.addArrangedSubview(rightBufferBottom)
                
                rightBufferTop.heightAnchor.constraint(equalTo: rightBufferBottom.heightAnchor).isActive = true
@@ -159,10 +163,10 @@ class AlbumTableViewCell: UITableViewCell{
 
 }// end of setUpUI()
     
-    @IBAction func FavoriteBtnPressed(_ sender: FavoriteVC) {
-        delegate?.onCellModelChange(cell: self, model: .FavoriteBtn)
-
-    }
+//    @IBAction func FavoriteBtnPressed(_ sender: FavoriteVC) {
+//        delegate?.onCellModelChange(cell: self, model: .FavoriteBtn)
+//
+//    }
     
     func update(with model: FavoriteButtonIdentity){
 //        favoriteButton.backgroundColor = .lightGray // probably change this later
@@ -176,7 +180,9 @@ class AlbumTableViewCell: UITableViewCell{
             favoriteButton.backgroundColor = .systemGray
         n = 0
         case .FavoriteBtnPressed:
-            favoriteButton.backgroundColor = .systemBlue
+           favoriteButton.backgroundColor = .systemBlue
+//            favoriteButton.setImage(UIImage(systemName: "filled-heart"), for: UIControl.State.normal)
+
             n = 1
          //   self.favoriteButtonPressed.backgroundColor = .systemBlue
 
@@ -190,10 +196,14 @@ class AlbumTableViewCell: UITableViewCell{
     }
    
     func configure(musicVM: AlbumViewModelTypes, index: Int){
+
         
-       // self.favoriteButton.text = musicVM.
-        self.itunesTitle.text = musicVM.albumTitle(for: index)//
-        self.itunesAuthor.text = musicVM.albumArtist(for: index)
+    self.itunesTitle.text = musicVM.albumTitle(for: index)//
+    self.itunesAuthor.text = "Artist: \(musicVM.albumArtist(for: index) ?? "" )"
+    
+        
+        
+        
         musicVM.albumImage(for: index) { imageData in // minute 30  -- calls in images
             guard let imageData = imageData else {
                 return
@@ -207,6 +217,8 @@ class AlbumTableViewCell: UITableViewCell{
         // still need to call the image view
         
     }
+    
+    
     var n = 0
         @objc
         func favoriteButtonPressed(){
@@ -224,4 +236,29 @@ class AlbumTableViewCell: UITableViewCell{
 //     if let display = UserDefaults.standard.object(forKey: "Display") as? Double {
 
 }
-
+//
+//@objc
+//func FavoriteBtnPressed(_ sender: Any) {
+//
+//    /* code below see if it helps*/
+//    if let button = sender as? UIbutton {
+//
+//        if !button.isSelected {
+//            button.isSelected = true
+//
+//            // deleteCellInded()
+//            button.backgroundColor = UIColor.lightGray
+//            print("button clicked is selected")
+//        }
+//        else {
+//            button.isSelected = false
+//            button.backgroundColor = UIColor.gray
+//            // deleteCellInded()
+//
+//        }
+//
+//
+//    }
+//
+//
+//}

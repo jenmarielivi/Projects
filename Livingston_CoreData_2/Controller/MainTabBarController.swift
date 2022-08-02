@@ -73,7 +73,7 @@ class HomeVC: UIViewController {
         
         table.dataSource = self
         table.delegate = self
-        table.backgroundColor = .white
+        //table.backgroundColor = .white
         
         let lightGray = UIColor.white
         table.backgroundColor = UIColor.withAlphaComponent(lightGray)(0.6)
@@ -103,15 +103,17 @@ class HomeVC: UIViewController {
     override func viewDidLoad() {
         
         super.viewDidLoad()
-        self.view.backgroundColor = .systemIndigo
+        self.view.backgroundColor = .darkGray
         self.setUpTableSection()
         title = "Home"
+       
         self.musicVM.getAlbums()
         for i in 0..<100 {  // put inside viewDidLoad
             elements.append(FavoriteButtonIdentity.FavoriteBtn)
         }
         
     } // end of override
+    
 func setUpTableSection() {
         
         self.view.addSubview(self.MusicTable)
@@ -197,7 +199,7 @@ class FavoriteVC: UIViewController {
         
 //        table.dataSource = self
 //        table.delegate = self
-        table.backgroundColor = .cyan
+        table.backgroundColor = .darkGray
         
 //        let lightGray = UIColor.white
 //        table.backgroundColor = UIColor.withAlphaComponent(lightGray)(0.6)

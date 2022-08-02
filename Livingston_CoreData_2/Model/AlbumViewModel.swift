@@ -10,21 +10,20 @@ import Foundation
 protocol AlbumViewModelCore {
 //    var networkManager: NetworkService { get }
     func bind(updateHandler: @escaping () -> Void) // binding function
-
     func getAlbums()    // need to be able to request to get the moview
-    func albumTitle(for index: Int) -> String? // 16: 10
-    func albumArtist(for index: Int) -> String?
-    func albumGenre()
-    func albumRelease()
+   
 
 }
 
 protocol AlbumViewModelAttributes {
     var count: Int { get }
-    
+    // var favAlbums: [FavAlbums]?
     func albumTitle(for index: Int) -> String?
-    
+    func albumArtist(for index: Int) -> String?
+    func albumRelease(for index: Int) -> String?
+    func albumGenre(for index: Int) -> String?
     func albumImage(for index: Int, completion: @escaping (Data?) -> Void)
+
 }
 
 
@@ -43,32 +42,30 @@ class AlbumViewModel {
         }
     }
     
+    var favAlbums: [FavAlbums]? {
+        didSet{
+            self.updateHandler?()
+        }
+    }
+    
     // networkManager: NetworkService piece has to be below the didSet
     private var networkManager: NetworkService
-    private var pageCount = 1
-    
     private var updateHandler: (() -> Void)?
+
     
-    init(networkManager: NetworkService) {
+    var manager: CoreDataManager
+//    private var pageCount = 1
+    
+
+    init(networkManager: NetworkService, manager: CoreDataManager = CoreDataManager()) {
         self.networkManager = networkManager
+        self.manager = manager
     }
 }
 
 extension AlbumViewModel: AlbumViewModelCore {
     
-    func albumArtist(for index: Int) -> String? {
-        guard index < self.count else { return nil}
-        return self.albums[index].artistName
-    }
-    
-    func albumGenre() {
-        return
-    }
-    
-    func albumRelease() {
-        return
-    }
-    
+ 
    
     func bind(updateHandler: @escaping () -> Void) {
         self.updateHandler = updateHandler // this is a separate call from the other one
@@ -85,20 +82,61 @@ extension AlbumViewModel: AlbumViewModelCore {
                 print(error)
             }
         }
-    }
-}
+    }// end of getAlbums
+    
+    
+    func makeFav(){}
+    
+    func deleteFav(){}
+    
+//    func makeAlbum(index: Int){
+//        self.manager.makeAlbum(musicVM: self, index: index)
+//    }
+//
+//
+//    func loadAlbum(){
+//        favAlbums = self.manager.getAlbums()
+//    }
+    
+    // func deleteAlbum(){   }
+    
+} // end of ext. AlbumViewModelCore
 
     
 
 extension AlbumViewModel: AlbumViewModelAttributes {
+   
+    
+    
     var count: Int {
         return self.albums.count
     }
+    
+    func albumArtist(for index: Int) -> String? {
+        guard index < self.count else { return nil}
+        return self.albums[index].artistName
+    }
+    
     
     func albumTitle(for index: Int) -> String? {
         guard index < self.count else { return nil }
         return self.albums[index].name
     }
+    
+    
+    
+    func albumRelease(for index: Int)-> String? {
+        guard index < self.count else { return nil }
+        return self.albums[index].releaseDate
+    }
+   
+    
+    func albumGenre(for index: Int) -> String?{
+        guard index < self.count else { return nil }
+        return self.albums[index].genres[0].name  // this line of code, along with whats in the setup in the detail screen allow it to show
+    }
+    
+    
     
     func albumImage(for index: Int, completion: @escaping (Data?) -> Void) {
         guard index < self.count else {
@@ -127,5 +165,8 @@ extension AlbumViewModel: AlbumViewModelAttributes {
             }
         }
     }
+    
+    
+  
 }
     
