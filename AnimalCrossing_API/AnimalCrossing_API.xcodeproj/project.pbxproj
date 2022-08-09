@@ -1,0 +1,665 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 55;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		02C18A9B28A17E120036D4BB /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 02C18A9A28A17E120036D4BB /* AppDelegate.m */; };
+		02C18A9E28A17E120036D4BB /* SceneDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 02C18A9D28A17E120036D4BB /* SceneDelegate.m */; };
+		02C18AA128A17E120036D4BB /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 02C18AA028A17E120036D4BB /* ViewController.m */; };
+		02C18AA428A17E120036D4BB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 02C18AA228A17E120036D4BB /* Main.storyboard */; };
+		02C18AA628A17E140036D4BB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 02C18AA528A17E140036D4BB /* Assets.xcassets */; };
+		02C18AA928A17E140036D4BB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 02C18AA728A17E140036D4BB /* LaunchScreen.storyboard */; };
+		02C18AAC28A17E140036D4BB /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 02C18AAB28A17E140036D4BB /* main.m */; };
+		02C18AD228A17EBD0036D4BB /* AC_Model.m in Sources */ = {isa = PBXBuildFile; fileRef = 02C18AD128A17EBD0036D4BB /* AC_Model.m */; };
+		02C18AD628A182500036D4BB /* NetworkManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 02C18AD528A182500036D4BB /* NetworkManager.m */; };
+		02C18ADA28A184F50036D4BB /* ACViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02C18AD928A184F50036D4BB /* ACViewModel.swift */; };
+		02C18ADE28A189C00036D4BB /* ACTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 02C18ADD28A189C00036D4BB /* ACTableViewCell.m */; };
+		02C18AF528A1AEE40036D4BB /* AnimalCrossing_APIUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02C18AF428A1AEE40036D4BB /* AnimalCrossing_APIUITests.swift */; };
+		02C18AF728A1AEE40036D4BB /* AnimalCrossing_APIUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02C18AF628A1AEE40036D4BB /* AnimalCrossing_APIUITestsLaunchTests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		02C18AB228A17E140036D4BB /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 02C18A8E28A17E120036D4BB /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 02C18A9528A17E120036D4BB;
+			remoteInfo = AnimalCrossing_API;
+		};
+		02C18AF828A1AEE40036D4BB /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 02C18A8E28A17E120036D4BB /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 02C18A9528A17E120036D4BB;
+			remoteInfo = AnimalCrossing_API;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		02C18A9628A17E120036D4BB /* AnimalCrossing_API.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AnimalCrossing_API.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		02C18A9928A17E120036D4BB /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		02C18A9A28A17E120036D4BB /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		02C18A9C28A17E120036D4BB /* SceneDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SceneDelegate.h; sourceTree = "<group>"; };
+		02C18A9D28A17E120036D4BB /* SceneDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SceneDelegate.m; sourceTree = "<group>"; };
+		02C18A9F28A17E120036D4BB /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		02C18AA028A17E120036D4BB /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		02C18AA328A17E120036D4BB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		02C18AA528A17E140036D4BB /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		02C18AA828A17E140036D4BB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		02C18AAA28A17E140036D4BB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		02C18AAB28A17E140036D4BB /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		02C18AB128A17E140036D4BB /* AnimalCrossing_APITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AnimalCrossing_APITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		02C18AD028A17EBD0036D4BB /* AC_Model.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AC_Model.h; sourceTree = "<group>"; };
+		02C18AD128A17EBD0036D4BB /* AC_Model.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AC_Model.m; sourceTree = "<group>"; };
+		02C18AD428A182500036D4BB /* NetworkManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NetworkManager.h; sourceTree = "<group>"; };
+		02C18AD528A182500036D4BB /* NetworkManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NetworkManager.m; sourceTree = "<group>"; };
+		02C18AD828A184F50036D4BB /* AnimalCrossing_API-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "AnimalCrossing_API-Bridging-Header.h"; sourceTree = "<group>"; };
+		02C18AD928A184F50036D4BB /* ACViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ACViewModel.swift; sourceTree = "<group>"; };
+		02C18ADC28A189C00036D4BB /* ACTableViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ACTableViewCell.h; sourceTree = "<group>"; };
+		02C18ADD28A189C00036D4BB /* ACTableViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ACTableViewCell.m; sourceTree = "<group>"; };
+		02C18AF228A1AEE40036D4BB /* AnimalCrossing_APIUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AnimalCrossing_APIUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		02C18AF428A1AEE40036D4BB /* AnimalCrossing_APIUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimalCrossing_APIUITests.swift; sourceTree = "<group>"; };
+		02C18AF628A1AEE40036D4BB /* AnimalCrossing_APIUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimalCrossing_APIUITestsLaunchTests.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		02C18A9328A17E120036D4BB /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		02C18AAE28A17E140036D4BB /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		02C18AEF28A1AEE40036D4BB /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		02C18A8D28A17E120036D4BB = {
+			isa = PBXGroup;
+			children = (
+				02C18ADB28A1899F0036D4BB /* Views */,
+				02C18AD728A184D40036D4BB /* ViewModel */,
+				02C18AD328A181C70036D4BB /* NetworkManager */,
+				02C18ACF28A17E570036D4BB /* Model */,
+				02C18ACE28A17E4A0036D4BB /* Resourcees */,
+				02C18A9828A17E120036D4BB /* AnimalCrossing_API */,
+				02C18AF328A1AEE40036D4BB /* AnimalCrossing_APIUITests */,
+				02C18A9728A17E120036D4BB /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		02C18A9728A17E120036D4BB /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				02C18A9628A17E120036D4BB /* AnimalCrossing_API.app */,
+				02C18AB128A17E140036D4BB /* AnimalCrossing_APITests.xctest */,
+				02C18AF228A1AEE40036D4BB /* AnimalCrossing_APIUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		02C18A9828A17E120036D4BB /* AnimalCrossing_API */ = {
+			isa = PBXGroup;
+			children = (
+				02C18A9F28A17E120036D4BB /* ViewController.h */,
+				02C18AA028A17E120036D4BB /* ViewController.m */,
+				02C18AA228A17E120036D4BB /* Main.storyboard */,
+				02C18AA528A17E140036D4BB /* Assets.xcassets */,
+				02C18AA728A17E140036D4BB /* LaunchScreen.storyboard */,
+				02C18AAA28A17E140036D4BB /* Info.plist */,
+				02C18AAB28A17E140036D4BB /* main.m */,
+			);
+			path = AnimalCrossing_API;
+			sourceTree = "<group>";
+		};
+		02C18ACE28A17E4A0036D4BB /* Resourcees */ = {
+			isa = PBXGroup;
+			children = (
+				02C18A9928A17E120036D4BB /* AppDelegate.h */,
+				02C18A9A28A17E120036D4BB /* AppDelegate.m */,
+				02C18A9C28A17E120036D4BB /* SceneDelegate.h */,
+				02C18A9D28A17E120036D4BB /* SceneDelegate.m */,
+			);
+			path = Resourcees;
+			sourceTree = "<group>";
+		};
+		02C18ACF28A17E570036D4BB /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				02C18AD028A17EBD0036D4BB /* AC_Model.h */,
+				02C18AD128A17EBD0036D4BB /* AC_Model.m */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		02C18AD328A181C70036D4BB /* NetworkManager */ = {
+			isa = PBXGroup;
+			children = (
+				02C18AD428A182500036D4BB /* NetworkManager.h */,
+				02C18AD528A182500036D4BB /* NetworkManager.m */,
+			);
+			path = NetworkManager;
+			sourceTree = "<group>";
+		};
+		02C18AD728A184D40036D4BB /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				02C18AD928A184F50036D4BB /* ACViewModel.swift */,
+				02C18AD828A184F50036D4BB /* AnimalCrossing_API-Bridging-Header.h */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		02C18ADB28A1899F0036D4BB /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				02C18ADC28A189C00036D4BB /* ACTableViewCell.h */,
+				02C18ADD28A189C00036D4BB /* ACTableViewCell.m */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		02C18AF328A1AEE40036D4BB /* AnimalCrossing_APIUITests */ = {
+			isa = PBXGroup;
+			children = (
+				02C18AF428A1AEE40036D4BB /* AnimalCrossing_APIUITests.swift */,
+				02C18AF628A1AEE40036D4BB /* AnimalCrossing_APIUITestsLaunchTests.swift */,
+			);
+			path = AnimalCrossing_APIUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		02C18A9528A17E120036D4BB /* AnimalCrossing_API */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 02C18AC528A17E140036D4BB /* Build configuration list for PBXNativeTarget "AnimalCrossing_API" */;
+			buildPhases = (
+				02C18A9228A17E120036D4BB /* Sources */,
+				02C18A9328A17E120036D4BB /* Frameworks */,
+				02C18A9428A17E120036D4BB /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = AnimalCrossing_API;
+			productName = AnimalCrossing_API;
+			productReference = 02C18A9628A17E120036D4BB /* AnimalCrossing_API.app */;
+			productType = "com.apple.product-type.application";
+		};
+		02C18AB028A17E140036D4BB /* AnimalCrossing_APITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 02C18AC828A17E140036D4BB /* Build configuration list for PBXNativeTarget "AnimalCrossing_APITests" */;
+			buildPhases = (
+				02C18AAD28A17E140036D4BB /* Sources */,
+				02C18AAE28A17E140036D4BB /* Frameworks */,
+				02C18AAF28A17E140036D4BB /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				02C18AB328A17E140036D4BB /* PBXTargetDependency */,
+			);
+			name = AnimalCrossing_APITests;
+			productName = AnimalCrossing_APITests;
+			productReference = 02C18AB128A17E140036D4BB /* AnimalCrossing_APITests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		02C18AF128A1AEE40036D4BB /* AnimalCrossing_APIUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 02C18AFA28A1AEE40036D4BB /* Build configuration list for PBXNativeTarget "AnimalCrossing_APIUITests" */;
+			buildPhases = (
+				02C18AEE28A1AEE40036D4BB /* Sources */,
+				02C18AEF28A1AEE40036D4BB /* Frameworks */,
+				02C18AF028A1AEE40036D4BB /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				02C18AF928A1AEE40036D4BB /* PBXTargetDependency */,
+			);
+			name = AnimalCrossing_APIUITests;
+			productName = AnimalCrossing_APIUITests;
+			productReference = 02C18AF228A1AEE40036D4BB /* AnimalCrossing_APIUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		02C18A8E28A17E120036D4BB /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1340;
+				LastUpgradeCheck = 1340;
+				TargetAttributes = {
+					02C18A9528A17E120036D4BB = {
+						CreatedOnToolsVersion = 13.4.1;
+						LastSwiftMigration = 1340;
+					};
+					02C18AB028A17E140036D4BB = {
+						CreatedOnToolsVersion = 13.4.1;
+						TestTargetID = 02C18A9528A17E120036D4BB;
+					};
+					02C18AF128A1AEE40036D4BB = {
+						CreatedOnToolsVersion = 13.4.1;
+						TestTargetID = 02C18A9528A17E120036D4BB;
+					};
+				};
+			};
+			buildConfigurationList = 02C18A9128A17E120036D4BB /* Build configuration list for PBXProject "AnimalCrossing_API" */;
+			compatibilityVersion = "Xcode 13.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 02C18A8D28A17E120036D4BB;
+			productRefGroup = 02C18A9728A17E120036D4BB /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				02C18A9528A17E120036D4BB /* AnimalCrossing_API */,
+				02C18AB028A17E140036D4BB /* AnimalCrossing_APITests */,
+				02C18AF128A1AEE40036D4BB /* AnimalCrossing_APIUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		02C18A9428A17E120036D4BB /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				02C18AA928A17E140036D4BB /* LaunchScreen.storyboard in Resources */,
+				02C18AA628A17E140036D4BB /* Assets.xcassets in Resources */,
+				02C18AA428A17E120036D4BB /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		02C18AAF28A17E140036D4BB /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		02C18AF028A1AEE40036D4BB /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		02C18A9228A17E120036D4BB /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				02C18AA128A17E120036D4BB /* ViewController.m in Sources */,
+				02C18A9B28A17E120036D4BB /* AppDelegate.m in Sources */,
+				02C18AAC28A17E140036D4BB /* main.m in Sources */,
+				02C18ADE28A189C00036D4BB /* ACTableViewCell.m in Sources */,
+				02C18A9E28A17E120036D4BB /* SceneDelegate.m in Sources */,
+				02C18AD628A182500036D4BB /* NetworkManager.m in Sources */,
+				02C18AD228A17EBD0036D4BB /* AC_Model.m in Sources */,
+				02C18ADA28A184F50036D4BB /* ACViewModel.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		02C18AAD28A17E140036D4BB /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		02C18AEE28A1AEE40036D4BB /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				02C18AF528A1AEE40036D4BB /* AnimalCrossing_APIUITests.swift in Sources */,
+				02C18AF728A1AEE40036D4BB /* AnimalCrossing_APIUITestsLaunchTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		02C18AB328A17E140036D4BB /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 02C18A9528A17E120036D4BB /* AnimalCrossing_API */;
+			targetProxy = 02C18AB228A17E140036D4BB /* PBXContainerItemProxy */;
+		};
+		02C18AF928A1AEE40036D4BB /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 02C18A9528A17E120036D4BB /* AnimalCrossing_API */;
+			targetProxy = 02C18AF828A1AEE40036D4BB /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		02C18AA228A17E120036D4BB /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				02C18AA328A17E120036D4BB /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		02C18AA728A17E140036D4BB /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				02C18AA828A17E140036D4BB /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		02C18AC328A17E140036D4BB /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.5;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		02C18AC428A17E140036D4BB /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.5;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		02C18AC628A17E140036D4BB /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = AnimalCrossing_API/Info.plist;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "JenniferLivingston.AnimalCrossing-API";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_OBJC_BRIDGING_HEADER = "ViewModel/AnimalCrossing_API-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		02C18AC728A17E140036D4BB /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = AnimalCrossing_API/Info.plist;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "JenniferLivingston.AnimalCrossing-API";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_OBJC_BRIDGING_HEADER = "ViewModel/AnimalCrossing_API-Bridging-Header.h";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		02C18AC928A17E140036D4BB /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.5;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "JenniferLivingston.AnimalCrossing-APITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/AnimalCrossing_API.app/AnimalCrossing_API";
+			};
+			name = Debug;
+		};
+		02C18ACA28A17E140036D4BB /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.5;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "JenniferLivingston.AnimalCrossing-APITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/AnimalCrossing_API.app/AnimalCrossing_API";
+			};
+			name = Release;
+		};
+		02C18AFB28A1AEE40036D4BB /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "JenniferLivingston.AnimalCrossing-APIUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = AnimalCrossing_API;
+			};
+			name = Debug;
+		};
+		02C18AFC28A1AEE40036D4BB /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "JenniferLivingston.AnimalCrossing-APIUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = AnimalCrossing_API;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		02C18A9128A17E120036D4BB /* Build configuration list for PBXProject "AnimalCrossing_API" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				02C18AC328A17E140036D4BB /* Debug */,
+				02C18AC428A17E140036D4BB /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		02C18AC528A17E140036D4BB /* Build configuration list for PBXNativeTarget "AnimalCrossing_API" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				02C18AC628A17E140036D4BB /* Debug */,
+				02C18AC728A17E140036D4BB /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		02C18AC828A17E140036D4BB /* Build configuration list for PBXNativeTarget "AnimalCrossing_APITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				02C18AC928A17E140036D4BB /* Debug */,
+				02C18ACA28A17E140036D4BB /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		02C18AFA28A1AEE40036D4BB /* Build configuration list for PBXNativeTarget "AnimalCrossing_APIUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				02C18AFB28A1AEE40036D4BB /* Debug */,
+				02C18AFC28A1AEE40036D4BB /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 02C18A8E28A17E120036D4BB /* Project object */;
+}
