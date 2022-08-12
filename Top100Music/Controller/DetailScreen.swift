@@ -32,7 +32,7 @@ class DetailScreenController: UIViewController {
         imageView.heightAnchor.constraint(equalToConstant: 150).isActive = true
 
         imageView.widthAnchor.constraint(equalToConstant: 150).isActive = true
-//        imageView.image = UIImage(named: "screenshotImg")
+        imageView.image = UIImage(named: "screenshotImg")
         return imageView
     }()
 
